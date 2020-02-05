@@ -15,9 +15,10 @@ class App < Sinatra::Base
   end
 
   get '/cat' do
-    "<div style='border: 3px dashed green'>
-      <img src='http://bit.ly/1eze8aE'>
-      </div>"
+    @name = ["Amigo", "Oscar", "Viking"].sample
+    erb(:index)
   end
 
 end
+
+# stopped at Keeping views clean
